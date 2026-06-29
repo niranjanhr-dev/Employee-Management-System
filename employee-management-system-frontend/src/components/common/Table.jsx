@@ -1,4 +1,4 @@
-import { Loader2 } from 'lucide-react';
+import { Loader2, SearchX } from 'lucide-react';
 
 export default function Table({ columns, data, loading, emptyMessage = 'No records found', actions }) {
   if (loading) {
@@ -35,7 +35,7 @@ export default function Table({ columns, data, loading, emptyMessage = 'No recor
               >
                 <div className="flex flex-col items-center gap-2">
                   <div className="w-12 h-12 rounded-2xl flex items-center justify-center border" style={{ backgroundColor: 'rgba(229,62,62,0.06)', borderColor: 'rgba(229,62,62,0.12)' }}>
-                    <span className="text-2xl">🔍</span>
+                    <SearchX size={20} style={{ color: '#e53e3e' }} />
                   </div>
                   <p>{emptyMessage}</p>
                 </div>

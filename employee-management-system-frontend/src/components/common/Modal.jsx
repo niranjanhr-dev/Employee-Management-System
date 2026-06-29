@@ -54,6 +54,7 @@ export default function Modal({ isOpen, onClose, title, children, size = 'md' })
         >
           <h2 className="text-base font-semibold" style={{ color: '#111111' }}>{title}</h2>
           <button
+            type="button"
             onClick={onClose}
             className="w-8 h-8 flex items-center justify-center rounded-lg transition-all duration-200"
             style={{ color: 'rgba(17,17,17,0.4)' }}

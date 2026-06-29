@@ -18,7 +18,7 @@ public class ProjectDto {
 	@NotBlank(message = "Client name is required")
 	private String clientName;
 
-	@NotNull(message = "End date is required")
+	@NotNull(message = "Start date is required")
 	private LocalDate startDate;
 
 

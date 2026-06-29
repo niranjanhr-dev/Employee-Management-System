@@ -4,15 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* =============================================
-   COLOR PALETTE:
-   Background: #ffffff (white)
-   Primary:    #e53e3e (red)
-   Accent 1:   #f97316 (orange)
-   Accent 2:   #f59e0b (yellow/amber)
-   Accent 3:   #2563eb (blue)
-   Dark:       #111111 (black)
-   ============================================= */
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #fafafa;
+  --color-text: #111111;
+  --color-primary: #e53e3e;
+  --color-primary-dark: #c53030;
+  --color-accent: #f97316;
+  --color-info: #2563eb;
+  --color-warning: #f59e0b;
+}
 
 @layer base {
   * {
@@ -25,8 +26,8 @@
 
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: #ffffff;
-    color: #111111;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     min-height: 100vh;
   }
 
@@ -58,7 +59,7 @@
 @layer components {
   /* ── Cards ── */
   .glass-card {
-    background: #ffffff;
+    background: var(--color-bg);
     border: 1px solid rgba(229, 62, 62, 0.12);
     border-radius: 1rem;
     box-shadow: 0 4px 24px rgba(229, 62, 62, 0.07), 0 1px 4px rgba(0,0,0,0.04);
@@ -92,7 +93,7 @@
            transition-all duration-200 flex items-center gap-2 border active:scale-95;
     background-color: #fff8f8;
     border-color: rgba(229, 62, 62, 0.2);
-    color: #e53e3e;
+    color: var(--color-primary);
   }
   .btn-secondary:hover {
     background-color: #ffe0e0;
@@ -115,9 +116,9 @@
   /* ── Inputs ── */
   .input-field {
     @apply w-full px-4 py-2.5 rounded-xl text-sm transition-all duration-200;
-    background-color: #fafafa;
+    background-color: var(--color-surface);
     border: 1px solid rgba(229, 62, 62, 0.18);
-    color: #111111;
+    color: var(--color-text);
     outline: none;
   }
   .input-field::placeholder {
